@@ -11,4 +11,4 @@ def register(request):
     return render(request,"register.html")
 
 def home(request):
-    return render(request, "template.html")
+    return render(request, "home.html")

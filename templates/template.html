@@ -25,7 +25,7 @@
     <!-- Container wrapper -->
     <div class="container">
       <!-- Navbar brand -->
-      <a class='nav-link active' href="" style="color:black;"><b>Home</b></a>
+      <a class='nav-link active' href="http://localhost:4543/home/" style="color:black;"><b>Home</b></a>
   
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
@@ -33,6 +33,9 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="#">Course</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard'%}">Dashboard</a>
           </li>
         </ul>
         <!-- Left links -->
@@ -44,7 +47,7 @@
               {{user.username}}
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <a class="dropdown-item" type="button">My Profils</a>
+              <a class="dropdown-item" href="">My Profils</a>
               <a class="dropdown-item" type="button">My Course</a>
               <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
             </div>
