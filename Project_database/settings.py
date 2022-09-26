@@ -140,3 +140,9 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL= "home"
 
 LOGIN_URL='login'
+
+#Email
+# import django.core.mail.backends.filebased.
+EMAIL_BACKEND="django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR /'test_inbox'
+PASSWORD_RESET_TIMEOUT = 600
