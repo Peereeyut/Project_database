@@ -3,8 +3,26 @@
 {% block title%}Home{% endblock %}
 
 
-
+{% load static %}
 {% block content %}
 
-<h1>Home</h1>
+<div class="container">
+    <h2>Carousel Example</h2>  
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="{% static '/photo/images.jpeg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static '/photo/idex2.jpeg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'photo/pngtree-cute-cartoon-characters-png-image_3021844.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div></div>
+    <script>$('.carousel').carousel({
+        interval: 2000
+      })</script> 
+  
 {% endblock %}

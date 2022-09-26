@@ -21,7 +21,7 @@ urls_user=include("app_users.urls")
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("django.contrib.auth.urls")),
-    path('teach/', urls_teach),
+    # path('teach/', urls_teach),
     path('', urls_frontend),
     path('',urls_user),
 ]

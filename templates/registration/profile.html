@@ -1,0 +1,55 @@
+{% extends 'template.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content%}
+
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+            <h2>Profile <span style="color: red;">"{{user.username}}"</span></h2>
+              
+              
+              <form action="{% url 'profile' %}" method="post">
+                {% csrf_token %}
+                <div class="form-outline mb-4 form-field">
+                  {{ form.first_name.label_tag}}
+                  {{ form.first_name}}
+                  {{ form.first_name.errors}}
+                </div>
+
+                <div class="form-outline mb-4 form-field">
+                  {{ form.last_name.label_tag}}
+                  {{ form.last_name}}
+                  {{ form.last_name.errors}}
+                </div>
+
+                  <div class="form-outline mb-4 form-field">
+                    {{ form.email.label_tag}}
+                    {{ form.email}}
+                    {{ form.email.errors}}
+                  </div>
+
+                <div class="form-outline mb-4 form-field">
+                    {{ ex.address.label_tag}}
+                    {{ ex.address}}
+                    {{ ex.address.errors}}
+                </div>
+
+                <div class="form-outline mb-4 form-field">
+                    {{ ex.phone.label_tag}}
+                    {{ ex.phone}}
+                    {{ ex.phone.errors}}
+                </div>
+
+
+              <div class="pt-1 mb-4">
+                <button class="btn btn-dark btn-lg btn-block" type="submit">บันทึก</button>
+              </div>
+              
+            </form>
+
+          
+</div>
+</div>
+
+{% endblock %}

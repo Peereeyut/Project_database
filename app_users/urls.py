@@ -3,10 +3,9 @@ from .views import *
 
 
 urlpatterns = [
-    # path('',include("django.contrib.auth.urls")),
-    #ฟอร์ม หลังlogin
-    path('user/course/', home, name="home"),
+    path('user/course/', home,),
     path('register/', register,name='register'),
     path('dashboard/', dashboard ,name='dashboard'),
-
+    path('profile/', profile, name='profile'),
+    path('course/', course, )
 ]
